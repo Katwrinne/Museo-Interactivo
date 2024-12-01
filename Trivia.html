@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo de Croacia - Trivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Barra de navegación */
+        .navbar {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f4d03f !important;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4 ;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('IMG/croacia-bg.jpg') no-repeat center center/cover;
+            color: black;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2e3b4e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #e6e9ef;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .question-box {
+            margin-bottom: 20px;
+        }
+        .question-box h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        label:hover {
+            transform: scale(1.05);
+            color: #4a90e2;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #357abf;
+            transform: scale(1.05);
+        }
+        .result, .feedback {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .feedback .correct {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .feedback .incorrect {
+            color: #f44336;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+         /* Footer */
+       .footer {
+            background: #1e3c72;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #f4d03f;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="IMG/Escudo.png" alt="Bandera">
+                Museo de Croacia
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="explorarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explorar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="explorarDropdown">
+                            <li><a class="dropdown-item" href="Historia.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="#">Economía</a></li>
+                            <li><a class="dropdown-item" href="#">Cultura</a></li>
+                            <li><a class="dropdown-item" href="#">Moneda</a></li>
+                            <li><a class="dropdown-item" href="#"">Gobierno</a></li>
+                            <li><a class="dropdown-item" href="#"">Conflictos Sociales</a></li>
+                            <li><a class="dropdown-item" href="delimitaciongeografica.html">Geografía</a></li>
+                            <li><a class="dropdown-item" href="salario.html">Salario</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DatosCuriosos.html">Datos Curiosos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EconomiaCroacia.html">Acerca De</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trivia.html">Trivia</a>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>CROACIA QUIZ</h1>
+    </header>
+    <main>
+        <div id="quiz-container"></div>
+        <button id="next-btn">Siguiente</button>
+        <div id="result" class="result"></div>
+        <div id="feedback" class="feedback"></div>
+        <button id="retry-btn" style="display: none;">Volver a Intentar</button>
+    </main>
+
+    <script>
+        const questions = [
+            { category: "Historia", question: "¿En qué año se independizó Croacia?", options: ["1991", "1990", "1985", "1995"], answer: "1991" },
+            { category: "Geografía", question: "¿Entre qué continentes se encuentra Croacia?", options: ["Europa y Asia", "Europa Central y Europa Meridional", "Asia y África", "Europa y América"], answer: "Europa Central y Europa Meridional" },
+            { category: "Idioma", question: "¿Cuál es el idioma oficial de Croacia?", options: ["Italiano", "Croata", "Inglés", "Serbio"], answer: "Croata" },
+            { category: "Población", question: "¿Cuál es la población aproximada de Croacia en 2024?", options: ["3.8 millones", "4.5 millones", "5 millones", "2.5 millones"], answer: "3.8 millones" },
+            { category: "Calidad de Vida", question: "¿Cuál es el salario mínimo en Croacia en 2024?", options: ["840 EUR", "700 EUR", "1000 EUR", "500 EUR"], answer: "840 EUR" },
+            { category: "Moneda", question: "¿Cuál es la moneda oficial de Croacia desde 2023?", options: ["Euro", "Kuna", "Dólar", "Libra"], answer: "Euro" },
+            { category: "Historia", question: "¿Quién fue el primer rey de Croacia?", options: ["Tomislav", "Zvonimir", "Dmitar", "Trpimir"], answer: "Tomislav" },
+            { category: "Geografía", question: "¿Cuál es el punto más alto de Croacia?", options: ["Dinara", "Velebit", "Biokovo", "Gorski Kotar"], answer: "Dinara" },
+            { category: "Cultura", question: "¿Qué ciudad croata es conocida por el Palacio de Diocleciano?", options: ["Split", "Dubrovnik", "Zagreb", "Pula"], answer: "Split" },
+            { category: "Cultura", question: "¿Cuál es una de las ciudades más antiguas de Croacia?", options: ["Zadar", "Zagreb", "Split", "Rijeka"], answer: "Zadar" },
+            { category: "Economía", question: "¿Qué porcentaje del PIB de Croacia se gasta en salud?", options: ["8.1%", "10%", "7.5%", "9.3%"], answer: "8.1%" },
+            { category: "Calidad de Vida", question: "¿Cuál es el IDH de Croacia en 2021?", options: ["0.858", "0.800", "0.890", "0.950"], answer: "0.858" },
+            { category: "Cultura", question: "¿Qué ciudad croata es conocida como la 'Perla del Adriático'?", options: ["Dubrovnik", "Split", "Zadar", "Pula"], answer: "Dubrovnik" },
+            { category: "Historia", question: "¿Qué imperio controló Croacia antes de su independencia?", options: ["Austrohúngaro", "Otómano", "Bizantino", "Romano"], answer: "Austrohúngaro" },
+            { category: "Idioma", question: "¿Cuál es el porcentaje de croatas que hablan croata como lengua materna?", options: ["95.6%", "85%", "90%", "80%"], answer: "95.6%" },
+            { category: "Historia", question: "¿Cuándo se unió Croacia a la Unión Europea?", options: ["2013", "2009", "2015", "2005"], answer: "2013" },
+            { category: "Gobierno", question: "¿Qué tipo de gobierno tiene Croacia?", options: ["República Parlamentaria", "Monarquía", "Dictadura", "República Presidencialista"], answer: "República Parlamentaria" },
+            { category: "Conflictos", question: "¿Qué causó la Guerra de Independencia en Croacia?", options: ["Tensiones étnicas", "Crisis económica", "Colonización", "Cambio climático"], answer: "Tensiones étnicas" },
+            { category: "Geografía", question: "¿Qué mar rodea a Croacia?", options: ["Adriático", "Mediterráneo", "Egeo", "Báltico"], answer: "Adriático" },
+            { category: "Población", question: "¿Qué porcentaje de la población croata vive en áreas urbanas?", options: ["61.2%", "50%", "75%", "45%"], answer: "61.2%" }
+        ];
+
+        let shuffledQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let correctAnswers = [];
+        let incorrectAnswers = [];
+
+        const quizContainer = document.getElementById("quiz-container");
+        const nextBtn = document.getElementById("next-btn");
+        const retryBtn = document.getElementById("retry-btn");
+        const resultDiv = document.getElementById("result");
+        const feedbackDiv = document.getElementById("feedback");
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function loadQuestions() {
+            shuffledQuestions = shuffle(questions).slice(0, 5);
+            currentQuestionIndex = 0;
+            score = 0;
+            correctAnswers = [];
+            incorrectAnswers = [];
+            resultDiv.textContent = "";
+            feedbackDiv.innerHTML = "";
+            retryBtn.style.display = "none";
+            nextBtn.style.display = "block";
+            showQuestion();
+        }
+
+        function showQuestion() {
+            quizContainer.innerHTML = "";
+            if (currentQuestionIndex < shuffledQuestions.length) {
+                const questionObj = shuffledQuestions[currentQuestionIndex];
+                const questionBox = document.createElement("div");
+                questionBox.className = "question-box";
+
+                const categoryTitle = document.createElement("h3");
+                categoryTitle.textContent = `Categoría: ${questionObj.category}`;
+                questionBox.appendChild(categoryTitle);
+
+                const questionTitle = document.createElement("h2");
+                questionTitle.textContent = questionObj.question;
+                questionBox.appendChild(questionTitle);
+
+                questionObj.options.forEach(option => {
+                    const label = document.createElement("label");
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = "answer";
+                    input.value = option;
+
+                    label.appendChild(input);
+                    label.appendChild(document.createTextNode(option));
+                    questionBox.appendChild(label);
+                });
+
+                quizContainer.appendChild(questionBox);
+            } else {
+                quizContainer.innerHTML = `<h2>¡Has completado el cuestionario!</h2>`;
+                resultDiv.textContent = `Tu puntaje final es: ${score} de ${shuffledQuestions.length}`;
+                nextBtn.style.display = "none";
+                retryBtn.style.display = "block";
+                showFeedback();
+            }
+        }
+
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (selectedOption) {
+                const userAnswer = selectedOption.value;
+                const currentQuestion = shuffledQuestions[currentQuestionIndex];
+                if (userAnswer === currentQuestion.answer) {
+                    score++;
+                    correctAnswers.push(currentQuestion);
+                } else {
+                    incorrectAnswers.push({ ...currentQuestion, userAnswer });
+                }
+                currentQuestionIndex++;
+                showQuestion();
+            } else {
+                alert("Por favor, selecciona una respuesta.");
+            }
+        }
+
+        function showFeedback() {
+            feedbackDiv.innerHTML = "<h3>Resultados:</h3>";
+            if (correctAnswers.length > 0) {
+                feedbackDiv.innerHTML += `<p class="correct">Correctas:</p>`;
+                correctAnswers.forEach(q => {
+                    feedbackDiv.innerHTML += `<p>✔️ ${q.question}</p>`;
+                });
+            }
+            if (incorrectAnswers.length > 0) {
+                feedbackDiv.innerHTML += `<p class="incorrect">Incorrectas:</p>`;
+                incorrectAnswers.forEach(q => {
+                    feedbackDiv.innerHTML += `
+                        <p>❌ ${q.question}</p>
+                        <p><strong>Tu respuesta:</strong> ${q.userAnswer}</p>
+                        <p><strong>Correcta:</strong> ${q.answer}</p>
+                    `;
+                });
+            }
+        }
+
+        nextBtn.addEventListener("click", checkAnswer);
+        retryBtn.addEventListener("click", loadQuestions);
+
+        loadQuestions();
+    </script>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>Síguenos en nuestras redes sociales</p>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+    <p>Derechos Reservados &copy; 2024 Museo de Croacia</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
