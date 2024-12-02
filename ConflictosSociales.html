@@ -1,102 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo de Croacia - Conflictos Sociales </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-                /* Barra de navegación */
-                .navbar {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* Barra de navegación */
+   /* Barra de navegación */
+.navbar {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .navbar .nav-link {
-            color: white !important;
-            transition: color 0.3s ease;
-        }
+.navbar .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
 
-        .navbar .nav-link:hover {
-            color: #f4d03f !important;
-        }
+.navbar .nav-link:hover {
+    color: #f4d03f !important;
+}
 
-        .navbar-brand img {
-            height: 30px;
-            margin-right: 10px;
-        }
+.navbar-brand img {
+    height: 30px;
+    margin-right: 10px;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4 ;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Establecer el body como un contenedor flexible */
+    height: 100%;
+}
 
-        /* Hero Section */
-        .hero {
-            background: url('IMG/croacia-bg.jpg') no-repeat center center/cover;
-            color: black;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+/* Asegurarse de que el html y body ocupen todo el alto disponible */
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-            padding: 100px 20px;
-        }
+/* Hero Section */
+.hero {
+    background: url('IMG/croacia-bg.jpg') no-repeat center center/cover;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 100px 20px;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-        }
+.hero p {
+    font-size: 1.2rem;
+}
 
-        /* Sección de tarjetas */
-        .card {
-            background: #a58a6f;
-            border: none;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+/* Sección de tarjetas */
+.card {
+    background: #a58a6f;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-        }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-        .card img {
-            height: 150px;
-            object-fit: cover;
-        }
+.card img {
+    height: 150px;
+    object-fit: cover;
+}
 
-        .timeline {
-            display: flex;
-            overflow-x: scroll;
-            padding: 20px 0;
-            gap: 15px;
-        }
+.timeline {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px 0;
+    gap: 15px;
+}
 
-        .timeline-item {
-            min-width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            background: white;
-            text-align: center;
-        }
+.timeline-item {
+    min-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    text-align: center;
+}
 
-        .timeline-item img {
-            width: 100%;
-            border-bottom: 3px solid #0056b3;
-        }
+.timeline-item img {
+    width: 100%;
+    border-bottom: 3px solid #0056b3;
+}
 
-        .timeline-item h5 {
-            padding: 10px;
-        }
+.timeline-item h5 {
+    padding: 10px;
+}
 
-       /* Footer */
-       .footer {
+/* Efecto hover para mover hacia arriba */
+.cuadro:hover {
+    transform: translateY(-10px); /* Mueve el cuadro hacia arriba */
+}
+
+  /* Footer */
+  .footer {
             background: #1e3c72;
             color: #ffffff;
             padding: 20px;
@@ -113,7 +127,44 @@
         .footer a:hover {
             color: #f4d03f;
         }
-    </style>
+
+
+/* Sección principal para ocupar el espacio restante */
+.main-content {
+    flex: 1;  /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+/* Estilo de contenedor y cuadros */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cuadro {
+    background-color: #e8f4fa;
+    border: 1px solid #d1e7f0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.cuadro h3 {
+    margin-top: 0;
+    color: #0078a0;
+}
+
+.cuadro p {
+    margin: 0;
+}
+
+
+</style>
+
+
 </head>
     <body>
      <!-- Barra de Navegación -->
@@ -161,48 +212,20 @@
         </div>
     </nav>
 
-    <div class="container my-5">
+    <div class="container mt-2">
     <!-- Hero Section -->
-    <div class="container my-4">
-    <div class="hero">
+    <div class="container mt-4">
+        <div class="hero text-center" style="background-color: #113969; color: white; padding: 20px; border-radius: 10px;">
         <h1>Conflictos Sociales</h1>
         Los conflictos sociales en Croacia son el resultado de tensiones históricas, económicas, políticas y étnicas. Estos enfrentamientos han influido profundamente en la identidad y desarrollo del país, desde la era medieval hasta su consolidación como estado moderno. Los eventos relacionados con la disolución de Yugoslavia y la posterior independencia croata destacan como hitos críticos en su historia reciente.
         Croacia aún lleva las cicatrices de un pasado turbulento. La Guerra de Independencia dejó profundas divisiones entre croatas y serbios, y los crímenes de guerra siguen siendo una herida abierta.</p>
     </div>
 </div>
-  <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 20px;
-        }
-        .contenedor {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .cuadro {
-            background-color: #e8f4fa;
-            border: 1px solid #d1e7f0;
-            border-radius: 8px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            color: #333;
-        }
-        .cuadro h3 {
-            margin-top: 0;
-            color: #0078a0;
-        }
-        .cuadro p {
-            margin: 0;
-        }
-    </style>
-</head>
+ 
 <body>
-    <h1>Desafios sociales</h1>
+    <div style="text-align: center; margin-top: 40px;">
+        <h1>Desafios sociales</h1>
+    </div>
     <div class="contenedor">
         <div class="cuadro">
             <h3>Derechos Humanos y Migrantes</h3>
@@ -239,7 +262,7 @@
     
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #a58a6f; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Contexto Histórico</h2>
                 <p>Edad Media: En 1102, Croacia entró en una unión personal con Hungría, lo que generó tensiones políticas debido a la pérdida de autonomía y el control externo.
                    Imperio Austrohúngaro: Durante el siglo XIX, los croatas lucharon por mantener su identidad frente a las políticas centralizadoras del imperio.
@@ -249,7 +272,7 @@
                 </div>
         </div>
         <div class="carousel-item">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #1e3c72; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Factores Desencadenantes</h2>
                 <p> Políticos: La centralización del poder en Yugoslavia fue vista como opresiva por los croatas, que buscaban mayor autonomía.
                     Económicos: La crisis económica de los años 80 en Yugoslavia exacerbó las desigualdades entre las regiones, con Croacia contribuyendo más al presupuesto federal que otras áreas.
@@ -258,7 +281,7 @@
                 </div>
         </div>
         <div class="carousel-item">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #2a5298; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Principales Conflictos Sociales</h2>
                 <p>Guerra de Independencia (1991-1995):
                     Causas: La disolución de Yugoslavia, tensiones étnicas y la búsqueda de soberanía croata.
@@ -275,7 +298,7 @@
         </div>
 
         <div class="carousel-item">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #2a5298; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Impacto de los Conflictos</h2>
                 <p>Económico: La guerra devastó gran parte de la infraestructura y dañó sectores clave como el turismo y la agricultura. La recuperación ha sido lenta pero constante.
                     Social: Los desplazamientos masivos dejaron profundas heridas en la cohesión social. A esto se suman problemas relacionados con la integración de refugiados y minorías.
@@ -285,7 +308,7 @@
         </div>
 
         <div class="carousel-item">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #2a5298; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Soluciones y Procesos de Reconciliación</h2>
                 <p> Mediación Internacional: La ONU y la OTAN jugaron roles clave durante y después del conflicto para garantizar acuerdos de paz y supervisar su cumplimiento.
                     Iniciativas Nacionales:
@@ -297,9 +320,9 @@
                     <img src="IMG/i.webp" class="d-block w-80" alt="Soluciones y Procesos de Reconciliación" style="max-width: 40%; height: auto;">
             </div>
         </div>
-
+        
         <div class="carousel-item">
-            <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 300px; background-color: #2a5298; color: white;">
+            <div class="d-flex flex-column justify-content-center align-items-center px-4" style="min-height: 300px; background-color: #a58a6f; color: white;">
                 <h2>Conclusión</h2>
                     Croacia ha atravesado un camino complejo desde su independencia. Los conflictos sociales han dejado cicatrices profundas, pero también han impulsado reformas significativas que buscan una sociedad más equitativa y estable.</p>
                     <img src="IMG/c.webp" class="d-block w-80" alt="Conclusion" style="max-width: 40%; height: auto;">
@@ -316,18 +339,19 @@
         <span class="visually-hidden">Siguiente</span>
     </button>
 </div>
-        
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>Síguenos en nuestras redes sociales</p>
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-        <p>Derechos Reservados &copy; 2024 Museo de Croacia</p>
-    </footer>
+</div>
 
+
+   <!-- Pie de página -->
+   <footer class="footer">
+    <p>Síguenos en nuestras redes sociales</p>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+    <p>Derechos Reservados &copy; 2024 Museo de Croacia</p>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
-
